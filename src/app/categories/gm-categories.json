@@ -1,0 +1,39 @@
+{
+    "Buisness":
+    {
+        "Consulting & Coaching":
+            {
+                "title":"Consulting & Coaching",
+                "img": "Consulting & Coaching"
+            },
+        "Legal Services":
+            {
+                "title":"Legal Services",
+                "img": "Legal Services"
+            },
+        "Insurance & Financial Services":
+            {
+                "title":"Insurance & Financial Services",
+                "img": "Insurance & Financial Services"
+            },
+        "Real Estate":
+            {
+                "title":"Real Estate",
+                "img": "Real Estate"
+            }
+    },
+
+    "Online Store":
+    {
+        "Fashion & Clothing":
+            {
+                "title":"Fashion & Clothing",
+                "img": "Fashion & Clothing"
+            },
+        "Jewelry & Accessories":
+            {
+                "title":"Jewelry & Accessories",
+                "img": "Jewelry & Accessories"
+            }
+    }
+}

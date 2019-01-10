@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ChooseOptionComponent } from './choose-option/choose-option.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    CategoriesComponent,
+    ChooseOptionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+	HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

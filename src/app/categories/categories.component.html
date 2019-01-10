@@ -1,0 +1,66 @@
+<header></header>
+<main role="main" class="container-fluid">
+	<div class="row">
+		<!-- Main section -->
+        <section class="col-md-7">
+			<div class="col-md-12">
+				<img src="assets/images/logo.png" class="gm-logo mt-3">
+			</div>
+			<div class="container">
+				<div class="offset-md-1 col-md-10 text-center">
+					<h2 class="mt-5">What type of website do you want to create?</h2>
+					<br/>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-left">
+						<div class="row">
+							<div class="col-md-4 gm-m-b-20" *ngFor="let datas of data">
+								<button type="button" class="gm-orange-hov btn btn-lg btn-block border gm-no-border-hov btn-outline-warning text-left" (click)="category = datas.Name">
+									<img src="{{datas.icon}}" class="gm-btn-icon gm-w-20">
+									<span class="gm-font-15 gm-black-col">{{datas.Name}}</span>
+								</button>
+							</div>
+							<div class="col-md-4">
+								<button type="button" class="gm-orange-hov btn btn-lg btn-block border gm-no-border-hov btn-outline-warning text-center">
+									<span class="gm-font-15 gm-black-col">Other</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 gm-m-t-40 gm-m-b-40 text-right">
+						<button type="button" class="btn btn-outline-primary gm-btn-curved gm-m-r-20">Skip</button>
+						<button class="btn btn-primary gm-btn-curved" type="submit">
+							<span class="gm-p-r-10">Next</span>
+							<i class="fa fa-angle-double-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+        </section>
+		
+		<!-- Side Section -->
+        <aside class="col-md-5 gm-primary-bg">
+			<div class="container" *ngIf="category">
+				<div class="col-md-12 text-center">
+					<h2 class="mt-3 gm-fw-400 gm-white-col">Choose Sub-Category</h2>
+				</div>
+				<div class="gm-w-100 gm-m-0-a">
+					<div class="container text-center"  *ngFor="let datas of data">
+						<div class="row" *ngIf="datas.Name == category" >
+							<h4 class="mt-4 gm-w-100 gm-secondary-col gm-fw-400 gm-m-b-20">{{datas.Name}}</h4>
+							<div class="col-md-4 gm-m-t-20 gm-m-b-20" *ngFor="let datas1 of datas.subcategories">
+								<div class="rounded-circle gm-primary2-bg gm-w-60 gm-circle-btn-has-icon">
+									<img src="{{datas1.icon}}" class="gm-w-90">
+								</div>
+								<p class="gm-white-col gm-align-center gm-font-12 gm-fw-300 gm-ls-05 gm-lh-15 gm-m-0-a gm-w-90  gm-p-t-10">{{datas1.Name}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </aside>
+	</div>
+</main>
+<footer></footer>
